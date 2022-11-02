@@ -2,19 +2,6 @@ import tkinter as tk
 import kolory as c
 
 
-class Game(tk.Frame):
-    def __init__(self):
-        tk.Frame.__init__(self)
-        self.grid()
-        self.master.title("2048")
-        self.main_grid = tk.Frame(
-            self, bg=c.GRID_COLOR, bd=3, width=600, height=600
-        )
-        self.main_grid.grid(pady=(100, 0))
-        self.make_gui()
-        self.mainloop()
-
-
 def make_gui(self):
     self.cels = []
     for i in range(4):
@@ -41,6 +28,20 @@ def make_gui(self):
     ).grid(row=0)
     self.score_label = tk.Label(score_frame, text="0", font=c.SCORE_FONT)
     self.score_label.grid(row=1)
+    pass
+
+
+class Game(tk.Frame):
+    def __init__(self):
+        tk.Frame.__init__(self)
+        self.grid()
+        self.master.title("2048")
+        self.main_grid = tk.Frame(
+            self, bg=c.GRID_COLOR, bd=3, width=600, height=600
+        )
+        self.main_grid.grid(pady=(100, 0))
+        self.make_gui()
+        self.mainloop()
 
 
 Game()
