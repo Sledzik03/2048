@@ -1,6 +1,6 @@
 GRID_COLOR = "#a39489"
 EMPTY_CELL_COLOR ="#c2b3a9"
-SCORE_lABEL_FONT = ("Verdana", 24)
+SCORE_LABEL_FONT = ("Verdana", 24)
 SCORE_FONT = ("Helvetica",36,"bold")
 GAME_OVER_FONT = ("Helvetica", 48,"bold")
 GAME_OVER_FONT_COLOR = "#ffffff"
