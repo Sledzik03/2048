@@ -45,11 +45,10 @@ class Game(tk.Frame):
         score_frame.place(relx=0.5, y=45, anchor="center")
         tk.Label(
             score_frame,
-            font=c.SCORE_lABEL_FONT
-        ).grid(row=0)
+            font=c.SCORE_lABEL_FONT).grid(row=0)
         self.score_label = tk.Label(score_frame, text="0", font=c.SCORE_FONT)
         self.score_label.grid(row=1)
-        pass
+
 
     def start_game(self):
         # create matrix
@@ -62,8 +61,7 @@ class Game(tk.Frame):
             bg=c.CELL_COLORS[2],
             fg=c.CELL_NUMBER_COLORS[2],
             font=c.CELL_NUMBER_FONTS[2],
-            text="2"
-        )
+            text="2")
         while (self.matrix[row][col] != 0):
             row = random.randint(0, 3)
             col = random.randint(0, 3)
@@ -101,7 +99,7 @@ class Game(tk.Frame):
             new_matrix.append([])
             for j in range(4):
                 new_matrix[i].append(self.matrix[i][3 - j])
-            self.matrix = new_matrix
+        self.matrix = new_matrix
 
     def transpose(self):
         new_matrix = [[0] * 4 for _ in range(4)]
@@ -208,10 +206,13 @@ class Game(tk.Frame):
                     text="Game Over",
                     bg=c.LOOSER_BG,
                     fg=c.GAME_OVER_FONT_COLOR,
-                    font=c.GAME_OVER_FONT
-                ).pack()
-    def main():
-        Game()
+                    font=c.GAME_OVER_FONT).pack()
 
-    if __name__ == "__main__":
-        main()
+
+
+
+def main():
+    Game()
+
+if __name__ == "__main__":
+    main()
